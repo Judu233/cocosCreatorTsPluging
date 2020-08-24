@@ -3,9 +3,27 @@
  * @description: 说明
  * @Date: 2020-08-18 00:06:33
  * @Author: judu233(769471424@qq.com)
- * @LastEditTime: 2020-08-24 19:36:50
+ * @LastEditTime: 2020-08-24 22:01:10
  * @LastEditors: judu233
  */
+
+/**
+ *  插件包名
+ */
+declare let PG_Name: string;
+/**
+ *  返回插件包下的js路径
+ *  比如： init.js
+ * @param str 要加载的js文件路径
+ * @param return "packages://PG_Name/js/init.js"
+ */
+declare function PG_JsPath(str: string): string;
+/**
+ *  返回插件根目录
+ * @param str 要返回基于str指定的路径
+ *  "packages://PG_Name/"
+ */
+declare function PG_RootPath(str: string): string;
 
 /**
  * 编辑器类
@@ -1875,24 +1893,6 @@ declare class Editor {
     static failed(e, any);
     static watchVariable(e, c, n);
 };
-
-/**
- *  插件包名
- */
-declare let PG_Name: string;
-/**
- *  返回插件包下的js路径
- *  比如： init.js
- * @param str 要加载的js文件路径
- * @param return "packages://PG_Name/js/init.js"
- */
-declare function PG_JsPath(str: string): string;
-/**
- *  返回插件根目录
- * @param str 要返回基于str指定的路径
- *  "packages://PG_Name/"
- */
-declare function PG_RootPath(str: string): string;
 
 /**
  *  事件参考：
