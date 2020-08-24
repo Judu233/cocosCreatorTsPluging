@@ -1,0 +1,26 @@
+{
+  "name": "ts_pluging",
+  "version": "0.0.1",
+  "description": "这是一个测试插件",
+  "author": "judu233",
+  "main": "js/mainLoad.js",
+  "main-menu": {
+    "i18n:MAIN_MENU.package.title/ts_pluging/open": {
+      "message": "ts_pluging:open"
+    },
+    "i18n:MAIN_MENU.package.title/ts_pluging/hello": {
+      "message": "ts_pluging:say-hello"
+    }
+  },
+  "panel": {
+    "main": "js/index.js",
+    "type": "dockable",
+    "title": "panel_one",
+    "width": 400,
+    "height": 300
+  },
+  "dependencies": {
+    "@types/node": "^14.6.0",
+    "@vue/cli": "^4.5.4"
+  }
+}
